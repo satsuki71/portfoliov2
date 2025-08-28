@@ -1,0 +1,15 @@
+.carouselContainer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.carouselTrack {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.logoItem {
+  flex: 0 0 auto;
+}
