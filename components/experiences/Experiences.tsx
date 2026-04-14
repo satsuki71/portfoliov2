@@ -5,7 +5,7 @@ import styles from './Experiences.module.scss'
 export default function Experiences() {
     const careerPath = [
         {
-          title: 'mai 2025 - maintenant',
+          title: 'mai 2025 - janvier 2026',
           cardTitle: 'Titre Professionnel Développeur Web et Web Mobile',
           cardSubtitle: 'IRFA BFC',
           cardDetailedText: 'Le Creusot',
@@ -47,22 +47,13 @@ export default function Experiences() {
         },
       ];
 
-      let boolean = false
-
-      const HandleClick = () => {
-        if(boolean) {
-          boolean = true
-        } else {
-          boolean = false
-        }
-      }
-
+      
       return (
         <div id="experiences" className={styles.experiences}>
           <h2>Mon parcours</h2>
             {careerPath.map((item, index) => (
                 <details key={index}>
-                    <summary onClick={HandleClick}>{item.cardTitle} {item.title} <strong></strong></summary>
+                    <summary><strong>{item.cardTitle}</strong> {item.title} </summary>
                     <p><GiPositionMarker /> {item.cardSubtitle} {item.cardDetailedText}</p>
                 </details>
             ))}
