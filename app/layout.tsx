@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
+import './layout.scss'
 
+import { IBM_Plex_Mono, Azeret_Mono } from 'next/font/google'
+
+const ibmPlex = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-ibm'
+})
+
+const azeret = Azeret_Mono({
+  subsets: ['latin'],
+  weight: ['500', '700'],
+  variable: '--font-azeret'
+})
 
 export const metadata: Metadata = {
   title: "Mon portfolio",
@@ -12,14 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${ibmPlex.variable} ${azeret.variable}`}>
       <body className="main-body">
         <header>
           <nav>
             <ul>
-              <li>Acceuil</li>
-              <li>Mes compétences</li>
+              <li>Accueil</li>
               <li>Mes projets</li>
+              <li>Mon parcours</li>
               <li>Contact</li>
             </ul>
           </nav>

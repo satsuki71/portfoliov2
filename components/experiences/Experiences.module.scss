@@ -1,0 +1,19 @@
+.experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 50px;
+      }
+    details {
+        font-family: "IBM Plex Mono", monospace;
+        margin-bottom: 30px;
+        padding: 25px;
+        width: 70vw;
+        border: 1px solid white;
+        border-radius: 15px; 
+    }
+}

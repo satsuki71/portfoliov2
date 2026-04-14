@@ -1,4 +1,6 @@
+"use client";
 import { GiPositionMarker } from "react-icons/gi";
+import styles from './Experiences.module.scss'
 
 export default function Experiences() {
     const careerPath = [
@@ -45,13 +47,23 @@ export default function Experiences() {
         },
       ];
 
+      let boolean = false
+
+      const HandleClick = () => {
+        if(boolean) {
+          boolean = true
+        } else {
+          boolean = false
+        }
+      }
+
       return (
-        <div id="experiences">
+        <div id="experiences" className={styles.experiences}>
+          <h2>Mon parcours</h2>
             {careerPath.map((item, index) => (
                 <details key={index}>
-                    <summary>{item.cardTitle} {item.title}</summary>
+                    <summary onClick={HandleClick}>{item.cardTitle} {item.title} <strong></strong></summary>
                     <p><GiPositionMarker /> {item.cardSubtitle} {item.cardDetailedText}</p>
-
                 </details>
             ))}
         </div>

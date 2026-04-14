@@ -1,28 +1,33 @@
 import Carousel from '@/components/carousel/Carousel';
-import './page.module.css'
+import './page.module.css';
+import './globals.css'
 import Experiences from '@/components/experiences/Experiences';
+import Projects from '@/components/projects/Projects';
+import styles from './page.module.css'
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <main>
-      <div id="hero_section">
-        <h1>Developpeur Web</h1>
-        <h2>
-          Passionnée par le web, je transforme des idées en sites intéractifs
-        </h2>
+      <section className={styles.hero}>
+        <Image
+          src="/background.jpg"
+          alt="Code informatique"
+          fill
+          priority
+          className={styles.bgImage}
+        />
 
-        <div id="skills">
-            <Carousel/>
+        <div className={styles.overlay}>
+          <h1>Développeur Web</h1>
+          <h2>
+            Passionnée par le web, je transforme des idées en sites interactifs
+          </h2>
         </div>
-
-        <div id="my-projects">
-            
-        </div>
-
-        <div id="profesionnal-experiences">
-            <Experiences/>
-        </div>
-      </div>
+      </section>
+        <Carousel />
+        <Projects />
+        <Experiences />
     </main>
   );
 }

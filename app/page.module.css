@@ -1,0 +1,37 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover; 
+  z-index: -1;
+  opacity: 0.2; 
+}
+
+.overlay {
+  position: relative;
+  z-index: 1; 
+  color: white;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
+  h1 {
+    margin-bottom: 40px;
+  }
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px; 
+  background: linear-gradient(to bottom, transparent, #0B1E33);
+  z-index: -1;
+}
